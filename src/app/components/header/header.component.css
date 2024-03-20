@@ -1,0 +1,23 @@
+@import url("https://fonts.googleapis.com/css2?family=Mouse+Memoirs&display=swap");
+
+.cabecalho {
+  text-align: center;
+  box-shadow: 0px 15px 10px -15px #ccc;
+  background-color: var(--header);
+}
+
+.cabecalho-titulo {
+  margin-top: -10px;
+  font-size: 3rem;
+  letter-spacing: 5px;
+  color: var(--azul);
+  font-family: "Mouse Memoirs", sans-serif;
+}
+
+.cabecalho-imagem {
+  width: 180px;
+}
+
+span {
+  color: var(--amarelo);
+}

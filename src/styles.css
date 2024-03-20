@@ -1,1 +1,22 @@
-/* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css2?family=McLaren&family=Quicksand:wght@300..700&display=swap");
+
+:root {
+  --fonte: "Quicksand", sans-serif;
+  --azul: #0078b4;
+  --amarelo: #ffc726;
+  --amarelo-claro: #ffc72682;
+  --background: #f0f0f0;
+  --header: #fafafa;
+  --mensagem-validacao: #db4215;
+}
+
+html,
+body {
+  height: 100%;
+  background-color: var(--background);
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--fonte);
+}

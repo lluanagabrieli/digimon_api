@@ -1,0 +1,7 @@
+<div [@abrirCard]="digimonCard ? true : false">
+  <div class="card">
+    <h2>{{ digimonCard.name }}</h2>
+    <p>Level: {{ digimonCard.level }}</p>
+    <img [src]="digimonCard.img" alt="{{ digimonCard.name }}" />
+  </div>
+</div>

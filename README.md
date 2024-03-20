@@ -1,27 +1,14 @@
-# TesteDigimon
+Consumo de API do Digimon
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.3.
+- Link da API: https://digimon-api.vercel.app/
 
-## Development server
+Página web criada utilizando o framework Angular. O sistema é responsável por listar os digimons, possuíndo um filtro por nome e outro por nível.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+As tecnologias utilizadas foram:
+HTML, CSS, TypeScript e Angular v.16.
 
-## Code scaffolding
+O que foi feito:
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+- Captação dos valores: campo de input para pegar o nome do digimon e select para o cliente selecionar o nível desejado;
+- Validações: formulários reativos e pattern(regex);
+- Animação dos cards: biblioteca 'animations' do Angular.

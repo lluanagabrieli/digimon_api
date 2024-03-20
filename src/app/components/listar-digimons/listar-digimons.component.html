@@ -1,0 +1,56 @@
+<app-header></app-header>
+
+<section class="secao-principal">
+  <!-- BUSCA POR NOME -->
+  <div class="campos-pesquisa">
+    <div>
+      <div>
+        <input [(ngModel)]="digimonNome" placeholder="Buscar por nome..." pattern="[a-zA-Z]*" name="nome" #nome="ngModel" required class="campos" />
+        <button (click)="buscaNome()" [disabled]="nome.invalid" class="botao">Buscar</button>
+
+        <div *ngIf="digimonNaoExiste">
+          <p class="validacao">Digimon inexistente</p>
+        </div>
+      </div>
+
+      <div *ngIf="nome.invalid && (nome.dirty || nome.touched)">
+        <div *ngIf="nome.errors?.['pattern']">
+          <p class="validacao">O nome deve conter apenas letras.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- POR NÍVEL -->
+    <div>
+      <div>
+        <select [(ngModel)]="digimonLevel" name="level" #level="ngModel" required class="campos">
+          <option value="">Buscar por nível</option>
+          <option *ngFor="let level of levels" [value]="level">{{ level }}</option>
+        </select>
+        <button (click)="buscaLevel()" [disabled]="level.invalid" class="botao">Buscar</button>
+
+        <div *ngIf="(level?.invalid && level?.touched) || level?.dirty">
+          <div *ngIf="level?.errors?.['required']">
+            <p class="validacao">Selecione o nível</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- VIEW DOS CARDS -->
+  <div class="div-cards">
+    <!-- DIGIMON POR NOME  -->
+    <div *ngIf="digimon">
+      <app-cards [digimonCard]="digimon"></app-cards>
+    </div>
+    <!-- LISTA DE DIGIMONS <níveis> -->
+    <div *ngIf="digimons.length > 0" class="cards">
+      <div *ngFor="let digimons of digimons">
+        <app-cards [digimonCard]="digimons"></app-cards>
+      </div>
+    </div>
+  </div>
+</section>
+
+<app-footer></app-footer>
