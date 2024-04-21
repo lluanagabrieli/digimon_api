@@ -13,4 +13,5 @@ Página web criada utilizando o framework Angular. O sistema é responsável por
 - Animação dos cards: biblioteca 'animations' do Angular.
 
 # Visualização: 
+[https://digimon-api-rust.vercel.app/](https://digimon-api-rust.vercel.app/)
 ![api_digimon](https://github.com/lluanagabrieli/digimon_api/blob/main/src/assets/digimon_api.jpg)
